@@ -12,11 +12,18 @@ def load_data():
 aggregated_rounds, test_predictions, test_predictions_elo = load_data()
 
 # Sidebar Navigation
-st.sidebar.title("🏀 March Madness Predictions")
-st.sidebar.info("Developed for interactive exploration of tournament predictions.")
-st.sidebar.info("Pre-tournament simulated Final 4: Auburn, Duke, Texas Tech, Houston")
-st.sidebar.info("Pre-tournament simulated Champion: Auburn")
-st.sidebar.info("All data used to build these predictions comes from kenpom.com and barttorvik.com.")
+st.sidebar.title("🏀 **March Madness Predictions**")
+
+st.sidebar.success("📊 **Developed for interactive exploration of tournament predictions.**")
+
+st.sidebar.info("🔮 **Simulated Final 4:**\n- 🏀 **Auburn**\n- 🏀 **Duke**\n- 🏀 **Texas Tech**\n- 🏀 **Houston**")
+
+st.sidebar.info("🏆 **Simulated Champion:** **Auburn**")
+
+st.sidebar.info("🏆 **Dark Horse Champion:** **Texas Tech**")
+
+st.sidebar.warning("📊 **Data Sources:**\n🔹 **KenPom.com**\n🔹 **BartTorvik.com**\n🔹 **Historical NCAA Tournament Data**")
+st.sidebar.info("📈 All predictions are made using a Gradient Boosting Regressor (GBR) model. This model is trained and tested on NCAA tournament games from the past 10 years.")
 st.sidebar.info("By David Mustard")
 
 # **Tabs for Navigation**
