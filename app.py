@@ -7,10 +7,10 @@ def load_data():
     aggregated_rounds = pd.read_excel("aggregated_round_win_percentages.xlsx", sheet_name=None)
     test_predictions = pd.read_excel("test_with_predictions.xlsx")
     test_predictions_elo = pd.read_excel("test_with_predictionselo.xlsx")
-    test_predictions_r2di = pd.read_excel("test_with_predictionsr2di.xlsx")  # 👈 Round 2 DI predictions
-    return aggregated_rounds, test_predictions, test_predictions_elo, test_predictions_r2di
+    
+    return aggregated_rounds, test_predictions, test_predictions_elo
 
-aggregated_rounds, test_predictions, test_predictions_elo, test_predictions_r2di = load_data()
+aggregated_rounds, test_predictions, test_predictions_elo = load_data()
 
 # Sidebar Navigation
 st.sidebar.title("🏀 **March Madness Predictions**")
@@ -71,12 +71,10 @@ with tab1:
 
 # Tab 2: Game Predictions
 with tab2:
-    st.markdown("## 📋 First Round Matchup Predictions")
+    st.markdown("## 📋 Second Round Matchup Predictions")
     st.write("Predicted game outcomes. ***These predictions do not account for injuries.***")
     st.dataframe(test_predictions, use_container_width=True)
 
-    st.markdown("### 📋 Second Round Matchup Predictions")
-    st.dataframe(test_predictions_r2di, use_container_width=True)
 
 # Tab 3: Team Ratings
 with tab3:
