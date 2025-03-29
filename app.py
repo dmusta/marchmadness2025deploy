@@ -59,7 +59,6 @@ with tab1:
 
     st.dataframe(
         full_df.style.format({
-            "Elite 8": "{:.1%}",
             "Final 4": "{:.1%}",
             "Title Game": "{:.1%}",
             "Champion": "{:.1%}"
@@ -69,7 +68,7 @@ with tab1:
 
 # Tab 2: Game Predictions
 with tab2:
-    st.markdown("## 📋 Sweet 16 Matchup Predictions")
+    st.markdown("## 📋 Elite 8 Matchup Predictions")
     st.write("Predicted game outcomes. ***These predictions do not account for injuries.***")
     st.dataframe(test_predictions, use_container_width=True)
 
